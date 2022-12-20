@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>../imgs/grey</title>
+<link href="../css/grey1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<ul id="list">
+	<span><img id="pen" src="../imgs/grey/pen.png"></span>
+	<span><img id="paint" src="../imgs/grey/paint.png"></span>
+	</ul>
+</body>
+	<script type="text/javascript">
+		var a=0;
+		var b=0;
+		var olist = document.getElementById("list");
+		var submit = document.getElementById("pen");
+		var submit1 =document.getElementById("paint");
+		submit.addEventListener("touchstart", submitForm);
+		submit1.addEventListener("touchstart", submitForm1);
+	function submitForm(){
+		if(a==1){
+			submit.style.width="20%";
+			submit.style.height="10%";
+			submit.style.left="250px"
+			submit.style.top='300px';
+			submit.style.marginLeft='500px';
+			$("oImg").remove();
+		}
+		if(a==0){
+			var oLi=document.createElement('li');
+			var oImg=document.createElement('img');
+			oImg.src="../imgs/grey/pen1.png";
+			oImg.setAttribute('class','img2');
+			oLi.appendChild(oImg);
+			olist.appendChild(oLi);
+			a++;
+		}
+		if(a==1 && b==1){
+			var oLi1=document.createElement('li');
+			var oImg1=document.createElement('img');
+			oImg1.src="../imgs/grey/p1.png";
+			oImg1.setAttribute('class','img4');
+			oLi1.appendChild(oImg1);
+			olist.appendChild(oLi1);
+			oLi1.addEventListener("touchstart", submitForm2);
+}
+	}
+	function submitForm1(){
+		if(b==1){
+			submit1.style.width="20%";
+			submit1.style.height="10%";
+			submit1.style.left="260px"
+			submit1.style.top='450px';
+			submit1.style.marginLeft='500px';
+			$("oImg").remove();
+		}
+		if(b==0){
+			var oLi=document.createElement('li');
+			var oImg=document.createElement('img');
+			oImg.src="../imgs/grey/paint1.png";
+			oImg.setAttribute('class','img3');
+			oLi.appendChild(oImg);
+			olist.appendChild(oLi);
+			b++;
+		}
+		if(a==1 && b==1){
+			var oLi1=document.createElement('li');
+			var oImg1=document.createElement('img');
+			oImg1.src="../imgs/grey/p1.png";
+			oImg1.setAttribute('class','img4');
+			oLi1.appendChild(oImg1);
+			olist.appendChild(oLi1);
+			oLi1.addEventListener("touchstart", submitForm2);
+}
+	}
+	function submitForm2(){
+		window.location.href="实验3.html";
+	}
+	</script>
+</html>

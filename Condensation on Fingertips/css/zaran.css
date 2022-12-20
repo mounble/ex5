@@ -1,0 +1,27 @@
+#bg{
+    width: 100%;
+    height: 100%;
+    background: url('../imgs//zaran/zaran_bg.png') no-repeat;
+}
+#kun{
+    position: absolute;
+    left: 80px;
+    top: 674px;
+    z-index: 1;
+}
+#word{
+    position: absolute;
+    top: 737px;
+    left: 90px;
+    z-index: 1;
+    display: none;
+}
+#kun2{
+    position: absolute;
+    left: 508px;
+    top: 302px;
+    width: 70px;
+    height: 60px;
+    display: none;
+}
+
